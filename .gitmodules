@@ -1,0 +1,3 @@
+[submodule "PacketEngine/vendor/spdlog"]
+	path = PacketEngine/vendor/spdlog
+	url = https://github.com/gabime/spdlog.git

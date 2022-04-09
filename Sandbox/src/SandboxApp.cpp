@@ -5,7 +5,7 @@ class Sandbox : public PacketEngine::Application
 public:
 	Sandbox()
 	{
-
+		PACKET_INFO("Hello, world!");
 	}
 
 	~Sandbox()

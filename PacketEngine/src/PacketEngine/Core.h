@@ -1,6 +1,6 @@
 #pragma once
 
-#ifdef PACKET_PLATFOTM_WINDOWS
+#ifdef PACKET_PLATFORM_WINDOWS
 	#ifdef PACKET_BUILD_DLL
 		#define PACKET_API __declspec(dllexport)
 	#else
