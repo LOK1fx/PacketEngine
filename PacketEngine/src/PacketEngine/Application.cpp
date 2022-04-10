@@ -8,7 +8,7 @@ namespace PacketEngine
 {
 	Application::Application()
 	{
-
+		m_Window = std::unique_ptr<Window>(Window::Create());
 	}
 
 	Application::~Application()
@@ -18,9 +18,9 @@ namespace PacketEngine
 
 	void Application::Run()
 	{
-		WindowResizeEvent e(1280, 720);
-		PACKET_TRACE(e);
-
-		while (true);
+		while (m_Running)
+		{
+			m_Window->OnUpdate();
+		}
 	}
 }
