@@ -1,5 +1,7 @@
 #pragma once
 
+#include "PacketEngine/Core.h"
+
 #include <string>
 #include <functional>
 
