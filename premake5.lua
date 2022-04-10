@@ -18,8 +18,8 @@ project "PacketEngine"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
-	pchheader "pepch.h"
-	pchsource "PacketEngine/src/pepch.cpp"
+	pchheader "pcktpch.h"
+	pchsource "PacketEngine/src/pcktpch.cpp"
 	
 	files
 	{
