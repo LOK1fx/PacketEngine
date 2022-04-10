@@ -90,9 +90,6 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ImportLibrary>..\bin\Debug-windows-x86_64\PacketEngine\PacketEngine.lib</ImportLibrary>
     </Link>
-    <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Debug-windows-x86_64\PacketEngine\PacketEngine.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\PacketEngine\PacketEngine.dll ..\bin\Debug-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\PacketEngine\PacketEngine.dll ..\bin\Debug-windows-x86_64\Sandbox &gt; nul)</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -114,9 +111,6 @@
       <OptimizeReferences>true</OptimizeReferences>
       <ImportLibrary>..\bin\Release-windows-x86_64\PacketEngine\PacketEngine.lib</ImportLibrary>
     </Link>
-    <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Release-windows-x86_64\PacketEngine\PacketEngine.dll\ (xcopy /Q /E /Y /I ..\bin\Release-windows-x86_64\PacketEngine\PacketEngine.dll ..\bin\Release-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows-x86_64\PacketEngine\PacketEngine.dll ..\bin\Release-windows-x86_64\Sandbox &gt; nul)</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Shipment|x64'">
     <ClCompile>
@@ -138,15 +132,16 @@
       <OptimizeReferences>true</OptimizeReferences>
       <ImportLibrary>..\bin\Shipment-windows-x86_64\PacketEngine\PacketEngine.lib</ImportLibrary>
     </Link>
-    <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Shipment-windows-x86_64\PacketEngine\PacketEngine.dll\ (xcopy /Q /E /Y /I ..\bin\Shipment-windows-x86_64\PacketEngine\PacketEngine.dll ..\bin\Shipment-windows-x86_64\Sandbox &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Shipment-windows-x86_64\PacketEngine\PacketEngine.dll ..\bin\Shipment-windows-x86_64\Sandbox &gt; nul)</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\PacketEngine.h" />
     <ClInclude Include="src\PacketEngine\Application.h" />
     <ClInclude Include="src\PacketEngine\Core.h" />
     <ClInclude Include="src\PacketEngine\EntryPoint.h" />
+    <ClInclude Include="src\PacketEngine\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\PacketEngine\Events\Event.h" />
+    <ClInclude Include="src\PacketEngine\Events\KeyEvent.h" />
+    <ClInclude Include="src\PacketEngine\Events\MouseEvent.h" />
     <ClInclude Include="src\PacketEngine\Log.h" />
   </ItemGroup>
   <ItemGroup>

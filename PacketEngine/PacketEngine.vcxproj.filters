@@ -4,6 +4,9 @@
     <Filter Include="PacketEngine">
       <UniqueIdentifier>{F3423B2D-DFA5-CAD1-882B-0388746D9654}</UniqueIdentifier>
     </Filter>
+    <Filter Include="PacketEngine\Events">
+      <UniqueIdentifier>{77BFAFA3-E320-8DB1-6C8E-D363D8EEC370}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\PacketEngine.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\PacketEngine\EntryPoint.h">
       <Filter>PacketEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PacketEngine\Events\ApplicationEvent.h">
+      <Filter>PacketEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PacketEngine\Events\Event.h">
+      <Filter>PacketEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PacketEngine\Events\KeyEvent.h">
+      <Filter>PacketEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PacketEngine\Events\MouseEvent.h">
+      <Filter>PacketEngine\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\PacketEngine\Log.h">
       <Filter>PacketEngine</Filter>

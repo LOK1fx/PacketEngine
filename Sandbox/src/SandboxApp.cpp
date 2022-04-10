@@ -6,6 +6,7 @@ public:
 	Sandbox()
 	{
 		PACKET_INFO("Hello, world!");
+		PACKET_ERROR("Errr");
 	}
 
 	~Sandbox()
