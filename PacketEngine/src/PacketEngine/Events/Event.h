@@ -2,9 +2,6 @@
 
 #include "PacketEngine/Core.h"
 
-#include <string>
-#include <functional>
-
 namespace PacketEngine
 {
 	enum class EventType

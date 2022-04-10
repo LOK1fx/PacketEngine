@@ -1,4 +1,8 @@
+#include "pepch.h"
 #include "Application.h"
+
+#include "PacketEngine/Events/ApplicationEvent.h"
+#include "PacketEngine/Log.h"
 
 namespace PacketEngine
 {
@@ -14,6 +18,9 @@ namespace PacketEngine
 
 	void Application::Run()
 	{
+		WindowResizeEvent e(1280, 720);
+		PACKET_TRACE(e);
+
 		while (true);
 	}
 }

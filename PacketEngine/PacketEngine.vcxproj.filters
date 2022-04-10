@@ -34,6 +34,7 @@
     <ClInclude Include="src\PacketEngine\Log.h">
       <Filter>PacketEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\pepch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\PacketEngine\Application.cpp">
@@ -42,5 +43,6 @@
     <ClCompile Include="src\PacketEngine\Log.cpp">
       <Filter>PacketEngine</Filter>
     </ClCompile>
+    <ClCompile Include="src\pepch.cpp" />
   </ItemGroup>
 </Project>

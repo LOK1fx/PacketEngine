@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace PacketEngine
 {
 	class PACKET_API KeyEvent : public Event
