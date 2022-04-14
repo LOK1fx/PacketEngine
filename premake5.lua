@@ -5,10 +5,15 @@ workspace "PacketEngine"
 	{
 		"Debug",
 		"Release",
-		"Shipment"
+		"Dist"
 	}
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
+
+IncludeDir = {}
+IncludeDir["GLFW"] = "PacketEngine/vendor/GLFW/include"
+
+include "PacketEngine/vendor/GLFW"
 
 project "PacketEngine"
 	location "PacketEngine"
@@ -30,7 +35,14 @@ project "PacketEngine"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"
@@ -57,8 +69,8 @@ project "PacketEngine"
 		defines "PACKET_RELEASE"
 		optimize "On"
 
-	filter "configurations:Shipment"
-		defines "PACKET_SHIPMENT"
+	filter "configurations:Dist"
+		defines "PACKET_DIST"
 		optimize "On"
 
 project "Sandbox"
@@ -104,6 +116,6 @@ project "Sandbox"
 		defines "PACKET_RELEASE"
 		optimize "On"
 
-	filter "configurations:Shipment"
-		defines "PACKET_SHIPMENT"
+	filter "configurations:Dist"
+		defines "PACKET_DIST"
 		optimize "On"

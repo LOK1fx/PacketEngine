@@ -2,6 +2,8 @@
 
 #include "PacketEngine/Window.h"
 
+#include "GLFW/glfw3.h"
+
 namespace PacketEngine
 {
 	class WindowsWindow : public Window
@@ -16,13 +18,13 @@ namespace PacketEngine
 		inline unsigned int GetHeight() const override { return m_Data.Height; }
 
 		inline void SetEventCallback(const EventCallbackFn& callback) override { m_Data.EventCallback = callback; }
-		void SetVSync(bool enabled);
-		bool IsVSyncOn() const;
+		void SetVSync(bool enabled) override;
+		bool IsVSyncOn() const override;
 	private:
 		virtual void Init(const WindowProps& props);
 		virtual void Shutdown();
 	private:
-
+		GLFWwindow* m_Window;
 
 		struct WindowData
 		{
