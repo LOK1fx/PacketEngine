@@ -81,6 +81,14 @@ namespace PacketEngine
 			data.EventCallback(event);
 		});
 
+		glfwSetCharCallback(m_Window, [](GLFWwindow* window, unsigned int character)
+		{
+			GET_WINDOW_USER_PTR_DATA(window);
+
+			KeyTypedEvent event(character);
+			data.EventCallback(event);
+		});
+
 		glfwSetKeyCallback(m_Window, [](GLFWwindow* window, int key, int scancode, int action, int mods)
 		{
 			GET_WINDOW_USER_PTR_DATA(window);
