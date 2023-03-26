@@ -10,12 +10,12 @@ public:
 
 	void OnUpdate() override
 	{
-		PACKET_INFO("ExampleLayer::Update()");
+		
 	}
 
 	void OnEvent(PacketEngine::Event& event) override
 	{
-		PACKET_INFO("{0}", event);
+		//PACKET_INFO("{0}", event);
 	}
 };
 
@@ -25,6 +25,7 @@ public:
 	Sandbox()
 	{
 		PushLayer(new ExampleLayer());
+		PushOverlay(new PacketEngine::ImGuiLayer());
 	}
 
 	~Sandbox()

@@ -5,6 +5,8 @@
 #include "PacketEngine/Layer.h"
 #include "PacketEngine/Log.h"
 
+#include "PacketEngine/ImGui/ImGuiLayer.h"
+
 // Entry point
 #include "PacketEngine/EntryPoint.h"
 // -----------

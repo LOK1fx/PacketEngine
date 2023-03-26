@@ -21,6 +21,9 @@ namespace PacketEngine
 
 		void PushLayer(Layer* layer);
 		void PushOverlay(Layer* overlay);
+
+		static inline Application& Get() { return *s_Instance; }
+		inline Window& GetWindow() { return *m_Window; }
 	private:
 		bool OnWindowClose(WindowCloseEvent& e);
 
@@ -28,6 +31,8 @@ namespace PacketEngine
 		bool m_Running = true;
 
 		LayerStack m_LayerStack;
+	private:
+		static Application* s_Instance;
 	};
 
 	Application* CreateApplication();

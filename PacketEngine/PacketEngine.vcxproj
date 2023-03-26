@@ -80,7 +80,7 @@
       <PrecompiledHeaderFile>pcktpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>PACKET_PLATFORM_WINDOWS;PACKET_BUILD_DLL;GLFW_INCLUDE_NONE;PACKET_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -100,7 +100,7 @@
       <PrecompiledHeaderFile>pcktpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>PACKET_PLATFORM_WINDOWS;PACKET_BUILD_DLL;GLFW_INCLUDE_NONE;PACKET_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -124,7 +124,7 @@
       <PrecompiledHeaderFile>pcktpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>PACKET_PLATFORM_WINDOWS;PACKET_BUILD_DLL;GLFW_INCLUDE_NONE;PACKET_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -151,18 +151,23 @@
     <ClInclude Include="src\PacketEngine\Events\Event.h" />
     <ClInclude Include="src\PacketEngine\Events\KeyEvent.h" />
     <ClInclude Include="src\PacketEngine\Events\MouseEvent.h" />
+    <ClInclude Include="src\PacketEngine\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\PacketEngine\Layer.h" />
     <ClInclude Include="src\PacketEngine\LayerStack.h" />
     <ClInclude Include="src\PacketEngine\Log.h" />
     <ClInclude Include="src\PacketEngine\Window.h" />
+    <ClInclude Include="src\Platform\OpenGL\imgui_impl_opengl3.h" />
+    <ClInclude Include="src\Platform\OpenGL\imgui_impl_opengl3_loader.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\pcktpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\PacketEngine\Application.cpp" />
+    <ClCompile Include="src\PacketEngine\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\PacketEngine\Layer.cpp" />
     <ClCompile Include="src\PacketEngine\LayerStack.cpp" />
     <ClCompile Include="src\PacketEngine\Log.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\imgui_impl_opengl3.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\pcktpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
@@ -174,6 +179,9 @@
     </ProjectReference>
     <ProjectReference Include="vendor\Glad\Glad.vcxproj">
       <Project>{BDD6857C-A90D-870D-52FA-6C103E10030F}</Project>
+    </ProjectReference>
+    <ProjectReference Include="vendor\imgui\ImGui.vcxproj">
+      <Project>{C0FF640D-2C14-8DBE-F595-301E616989EF}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
