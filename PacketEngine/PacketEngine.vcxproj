@@ -153,9 +153,11 @@
     <ClInclude Include="src\PacketEngine\Events\MouseEvent.h" />
     <ClInclude Include="src\PacketEngine\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\PacketEngine\Input.h" />
+    <ClInclude Include="src\PacketEngine\KeyCodes.h" />
     <ClInclude Include="src\PacketEngine\Layer.h" />
     <ClInclude Include="src\PacketEngine\LayerStack.h" />
     <ClInclude Include="src\PacketEngine\Log.h" />
+    <ClInclude Include="src\PacketEngine\MouseButtonCodes.h" />
     <ClInclude Include="src\PacketEngine\Window.h" />
     <ClInclude Include="src\Platform\OpenGL\imgui_impl_opengl3.h" />
     <ClInclude Include="src\Platform\OpenGL\imgui_impl_opengl3_loader.h" />
