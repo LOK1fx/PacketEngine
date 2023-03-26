@@ -152,12 +152,14 @@
     <ClInclude Include="src\PacketEngine\Events\KeyEvent.h" />
     <ClInclude Include="src\PacketEngine\Events\MouseEvent.h" />
     <ClInclude Include="src\PacketEngine\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\PacketEngine\Input.h" />
     <ClInclude Include="src\PacketEngine\Layer.h" />
     <ClInclude Include="src\PacketEngine\LayerStack.h" />
     <ClInclude Include="src\PacketEngine\Log.h" />
     <ClInclude Include="src\PacketEngine\Window.h" />
     <ClInclude Include="src\Platform\OpenGL\imgui_impl_opengl3.h" />
     <ClInclude Include="src\Platform\OpenGL\imgui_impl_opengl3_loader.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\pcktpch.h" />
   </ItemGroup>
@@ -168,6 +170,7 @@
     <ClCompile Include="src\PacketEngine\LayerStack.cpp" />
     <ClCompile Include="src\PacketEngine\Log.cpp" />
     <ClCompile Include="src\Platform\OpenGL\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\pcktpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
