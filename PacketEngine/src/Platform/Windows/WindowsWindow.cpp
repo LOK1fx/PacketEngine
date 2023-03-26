@@ -1,6 +1,8 @@
 #include "pcktpch.h"
 #include "WindowsWindow.h"
 
+#include <glad/glad.h>
+
 namespace PacketEngine
 {
 	static bool s_GLFWInitialized = false;
@@ -26,18 +28,22 @@ namespace PacketEngine
 		m_Data.Width = props.Width;
 		m_Data.Height = props.Height;
 
-		PACKET_CORE_INFO("Creating window {0} ({1}, {2})", props.Title, props.Width, props.Height);
+		PACKET_CORE_INFO("Creating window {0} ({1}w, {2}h)", props.Title, props.Width, props.Height);
 
 		if (!s_GLFWInitialized)
 		{
-			int succes = glfwInit();
-			PACKET_CORE_ASSERT(succes, "Could not initialize GLFW!");
+			int success = glfwInit();
+			PACKET_CORE_ASSERT(success, "Could not initialize GLFW!");
 
 			s_GLFWInitialized = true;
 		}
 
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
+
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		PACKET_CORE_ASSERT(status, "Failed to intialize Glad!");
+
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 	}

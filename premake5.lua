@@ -1,5 +1,5 @@
 workspace "PacketEngine"
-	architecture "x64"
+	architecture "x86"
 
 	configurations
 	{
@@ -12,8 +12,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
 IncludeDir["GLFW"] = "PacketEngine/vendor/GLFW/include"
+IncludeDir["Glad"] = "PacketEngine/vendor/Glad/include"
 
 include "PacketEngine/vendor/GLFW"
+include "PacketEngine/vendor/Glad"
 
 project "PacketEngine"
 	location "PacketEngine"
@@ -36,12 +38,14 @@ project "PacketEngine"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links
 	{
 		"GLFW",
+		"Glad",
 		"opengl32.lib"
 	}
 
@@ -53,13 +57,14 @@ project "PacketEngine"
 		defines
 		{
 			"PACKET_PLATFORM_WINDOWS",
-			"PACKET_BUILD_DLL"
+			"PACKET_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
-		--postbuildcommands
-		--{
-		--	("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
-		--}
+		postbuildcommands
+		{
+			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Sandbox")
+		}
 
 	filter "configurations:Debug"
 		defines "PACKET_DEBUG"

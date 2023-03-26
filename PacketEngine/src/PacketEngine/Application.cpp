@@ -4,7 +4,7 @@
 #include "PacketEngine/Events/ApplicationEvent.h"
 #include "PacketEngine/Log.h"
 
-#include "GLFW/glfw3.h"
+#include "glad/glad.h"
 
 namespace PacketEngine
 {
