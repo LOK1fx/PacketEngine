@@ -37,6 +37,12 @@
     <ClInclude Include="src\PacketEngine\Events\MouseEvent.h">
       <Filter>PacketEngine\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\PacketEngine\Layer.h">
+      <Filter>PacketEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PacketEngine\LayerStack.h">
+      <Filter>PacketEngine</Filter>
+    </ClInclude>
     <ClInclude Include="src\PacketEngine\Log.h">
       <Filter>PacketEngine</Filter>
     </ClInclude>
@@ -50,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\PacketEngine\Application.cpp">
+      <Filter>PacketEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PacketEngine\Layer.cpp">
+      <Filter>PacketEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PacketEngine\LayerStack.cpp">
       <Filter>PacketEngine</Filter>
     </ClCompile>
     <ClCompile Include="src\PacketEngine\Log.cpp">
