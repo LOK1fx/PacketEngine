@@ -7,6 +7,8 @@
 #include "Events/Event.h"
 #include "PacketEngine/Events/ApplicationEvent.h"
 
+#include "PacketEngine/ImGui/ImGuiLayer.h"
+
 namespace PacketEngine
 {
 	class PACKET_API Application
@@ -28,6 +30,7 @@ namespace PacketEngine
 		bool OnWindowClose(WindowCloseEvent& e);
 
 		std::unique_ptr<Window> m_Window;
+		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 
 		LayerStack m_LayerStack;

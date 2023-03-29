@@ -93,9 +93,6 @@
     <ClInclude Include="src\PacketEngine\Window.h">
       <Filter>src\PacketEngine</Filter>
     </ClInclude>
-    <ClInclude Include="src\Platform\OpenGL\imgui_impl_opengl3.h">
-      <Filter>src\Platform\OpenGL</Filter>
-    </ClInclude>
     <ClInclude Include="src\Platform\OpenGL\imgui_impl_opengl3_loader.h">
       <Filter>src\Platform\OpenGL</Filter>
     </ClInclude>
@@ -1337,6 +1334,9 @@
     <ClCompile Include="src\PacketEngine\Application.cpp">
       <Filter>src\PacketEngine</Filter>
     </ClCompile>
+    <ClCompile Include="src\PacketEngine\ImGui\ImGuiBuild.cpp">
+      <Filter>src\PacketEngine\ImGui</Filter>
+    </ClCompile>
     <ClCompile Include="src\PacketEngine\ImGui\ImGuiLayer.cpp">
       <Filter>src\PacketEngine\ImGui</Filter>
     </ClCompile>
@@ -1348,9 +1348,6 @@
     </ClCompile>
     <ClCompile Include="src\PacketEngine\Log.cpp">
       <Filter>src\PacketEngine</Filter>
-    </ClCompile>
-    <ClCompile Include="src\Platform\OpenGL\imgui_impl_opengl3.cpp">
-      <Filter>src\Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp">
       <Filter>src\Platform\Windows</Filter>

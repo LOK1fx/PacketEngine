@@ -107,6 +107,7 @@ project "Sandbox"
 	{
 		"PacketEngine/vendor/spdlog/include",
 		"PacketEngine/src",
+		"PacketEngine/vendor",
 		"%{IncludeDir.glm}"
 	}
 

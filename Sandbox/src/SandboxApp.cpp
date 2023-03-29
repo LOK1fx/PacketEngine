@@ -1,4 +1,5 @@
 #include <PacketEngine.h>
+#include <imgui\imgui.h>
 
 class ExampleLayer : public PacketEngine::Layer
 {
@@ -41,6 +42,13 @@ public:
 		}
 	}
 
+	virtual void OnImGuiRender() override
+	{
+		ImGui::Begin("Test window");
+		ImGui::Text("Welcome to the PacketEngine!");
+		ImGui::End();
+	}
+
 	void OnEvent(PacketEngine::Event& event) override
 	{
 		
@@ -56,7 +64,6 @@ public:
 	Sandbox()
 	{
 		PushLayer(new ExampleLayer());
-		PushOverlay(new PacketEngine::ImGuiLayer());
 	}
 
 	~Sandbox()

@@ -79,7 +79,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pcktpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>PACKET_PLATFORM_WINDOWS;PACKET_BUILD_DLL;GLFW_INCLUDE_NONE;PACKET_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>IMGUI_API=_declspec(dllexport);PACKET_PLATFORM_WINDOWS;PACKET_BUILD_DLL;GLFW_INCLUDE_NONE;PACKET_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;vendor\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
@@ -159,7 +159,6 @@
     <ClInclude Include="src\PacketEngine\Log.h" />
     <ClInclude Include="src\PacketEngine\MouseButtonCodes.h" />
     <ClInclude Include="src\PacketEngine\Window.h" />
-    <ClInclude Include="src\Platform\OpenGL\imgui_impl_opengl3.h" />
     <ClInclude Include="src\Platform\OpenGL\imgui_impl_opengl3_loader.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
@@ -575,11 +574,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\PacketEngine\Application.cpp" />
+    <ClCompile Include="src\PacketEngine\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\PacketEngine\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\PacketEngine\Layer.cpp" />
     <ClCompile Include="src\PacketEngine\LayerStack.cpp" />
     <ClCompile Include="src\PacketEngine\Log.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\imgui_impl_opengl3.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\pcktpch.cpp">
