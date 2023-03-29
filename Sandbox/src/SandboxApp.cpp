@@ -5,7 +5,7 @@ class ExampleLayer : public PacketEngine::Layer
 public:
 	ExampleLayer() : Layer("Example")
 	{
-
+		
 	}
 
 	void OnUpdate() override
@@ -46,7 +46,8 @@ public:
 		
 	}
 private:
-	float m_XPos, m_YPos = 0.0f;
+	float m_XPos = 0.0f;
+	float m_YPos = 0.0f;
 };
 
 class Sandbox : public PacketEngine::Application

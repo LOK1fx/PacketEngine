@@ -14,6 +14,7 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "PacketEngine/vendor/GLFW/include"
 IncludeDir["Glad"] = "PacketEngine/vendor/Glad/include"
 IncludeDir["ImGui"] = "PacketEngine/vendor/imgui"
+IncludeDir["glm"] = "PacketEngine/vendor/glm"
 
 include "PacketEngine/vendor/GLFW"
 include "PacketEngine/vendor/Glad"
@@ -33,7 +34,9 @@ project "PacketEngine"
 	files
 	{
 		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
+		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/vendor/glm/glm/**.hpp",
+		"%{prj.name}/vendor/glm/glm/**.inl"
 	}
 
 	includedirs
@@ -42,7 +45,8 @@ project "PacketEngine"
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
-		"%{IncludeDir.ImGui}"
+		"%{IncludeDir.ImGui}",
+		"%{IncludeDir.glm}"
 	}
 
 	links
@@ -102,7 +106,8 @@ project "Sandbox"
 	includedirs
 	{
 		"PacketEngine/vendor/spdlog/include",
-		"PacketEngine/src"
+		"PacketEngine/src",
+		"%{IncludeDir.glm}"
 	}
 
 	links
