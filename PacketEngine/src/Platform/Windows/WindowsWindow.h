@@ -1,8 +1,9 @@
 #pragma once
 
 #include "PacketEngine/Window.h"
+#include "PacketEngine/Renderer/GraphicsContext.h"
 
-#include "GLFW/glfw3.h"
+#include <GLFW/glfw3.h>
 
 namespace PacketEngine
 {
@@ -27,6 +28,7 @@ namespace PacketEngine
 		virtual void Shutdown();
 	private:
 		GLFWwindow* m_Window;
+		GraphicsContext* m_Context;
 
 		struct WindowData
 		{

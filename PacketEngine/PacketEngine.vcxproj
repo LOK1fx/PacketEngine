@@ -158,8 +158,10 @@
     <ClInclude Include="src\PacketEngine\LayerStack.h" />
     <ClInclude Include="src\PacketEngine\Log.h" />
     <ClInclude Include="src\PacketEngine\MouseButtonCodes.h" />
+    <ClInclude Include="src\PacketEngine\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\PacketEngine\Window.h" />
     <ClInclude Include="src\Platform\OpenGL\imgui_impl_opengl3_loader.h" />
+    <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\pcktpch.h" />
@@ -579,6 +581,7 @@
     <ClCompile Include="src\PacketEngine\Layer.cpp" />
     <ClCompile Include="src\PacketEngine\LayerStack.cpp" />
     <ClCompile Include="src\PacketEngine\Log.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\pcktpch.cpp">
