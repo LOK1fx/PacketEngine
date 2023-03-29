@@ -1,3 +1,6 @@
 [submodule "PacketEngine/vendor/spdlog"]
 	path = PacketEngine/vendor/spdlog
 	url = https://github.com/gabime/spdlog.git
+[submodule "PacketEngine/vendor/imgui"]
+	path = PacketEngine/vendor/imgui
+	url = https://github.com/LOK1fx/imgui
